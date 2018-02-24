@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- We'll take care of the zoom ourselves -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- iPhone icon + chromeless browser -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- iPhone homescreen icon -->
+		<link rel="apple-touch-icon" href="img/gameIcon.png" /> 
+		<link rel="apple-touch-icon-precomposed" href="img/gameIcon.png"/>
+		<!-- Chrome Frame -->
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<title>Game</title>
+		<script src="constants.js" charset="utf-8"></script>
+		<script src="timer.js" charset="utf-8"></script>
+		<script src="sprite.js" charset="utf-8"></script>
+		<script src="game.js" charset="utf-8"></script>
+		<script src="input.js" charset="utf-8"></script>
+		<script src="main.js" charset="utf-8"></script>
+    </head>
+    <body>
+		<canvas id="myCanvas" width="800" height="600" style="scroll:both;border: 1px solid black;">
+			Your browser doesn't include support for the canvas tag.
+		</canvas>
+		<div style="display:inline-block;width:400px;vertical-align:top;">
+		    <div><span>Canvas Height:</span><span id="statusCanvasHeight"></span></div>
+		    <div><span>Canvas Width:</span><span id="statusCanvasWidth"></span></div>
+		    <div><span>Clock  Start:</span><span id="statusClockStart"></span></div>
+		    <div><span>Clock:</span><span id="statusClock"></span></div>
+		    <div><span>Clock Run:</span><span id="statusClockRun"></span></div>
+		    <div><span>GameTime:</span><span id="statusGameTime"></span></div>
+			<div><span>FPS:</span><span id="statusFPS"></span></div>
+		    <div><span>Player Level:</span><span id="statusPlayerLevel"></span></div>
+		    <div><span>Player Health:</span><span id="statusPlayerHealth"></span></div>
+		    <div><span>Player Magic:</span><span id="statusPlayerMagic"></span></div>
+		    <div><span>Player Experience:</span><span id="statusPlayerExperience"></span></div>
+			<div>
+				<span>></span>
+				<input style="width:400px;" id="inputField" type="text" value="" />
+			</div>
+			<div>
+			    <span id="outputField"></span>
+			</div>
+			<div>
+			    <span>health:</span><div id="healthBar" style="display:inline-block;height:25px;width:0%;background-color:red;"></div>
+			    <span>magic:</span><div id="magicBar" style="display:inline-block;height:25px;width:0%;background-color:blue;"></div>
+			    <span>experience:</span><div id="experienceBar" style="display:inline-block;height:25px;width:0%;background-color:yellow;"></div>
+			</div>	
+			<div>
+				<button style="width:400px;" id="newGameButton" >New Game</button>
+			</div>
+			<div>
+				<button style="width:400px;" id="showHeatMapButton" >Show Heat Map</button>
+			</div>
+			<div>
+				<button style="width:400px;" id="nextBoardButton" >Next board</button>
+			</div>
+		</div>
+    </body>
+</html>
